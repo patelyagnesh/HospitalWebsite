@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>About Us</title>
+  <script src="https://kit.fontawesome.com/7ee2a4395b.js" crossorigin="anonymous"></script>
+  <style>
+    * 
+    {
+      box-sizing: border-box;
+    }
+
+    body 
+    {
+      margin: 0;
+    }
+
+    /* Create three equal columns that floats next to each other */
+
+    .clm1 
+    {
+      float: left;
+      width: 60%;
+      padding: 15px;
+      text-align: justify;
+    }
+
+    .clm1 h1
+    {
+      font-family: Raleway,'Trebuchet MS', Helvetica, sans-serif;
+      background: linear-gradient(to right, Crimson 0%, transparent 100%);
+      padding-left: 10px;
+      text-shadow: 2px 2px 4px black;
+      color: white;
+    }
+
+    .clm1 li
+    {
+      font-size: 20px;
+      padding: 7px 00px;
+    }
+
+    .clm2 
+    {
+      float: left;
+      width: 40%;
+      padding: 120px 70px;
+    }
+
+    .clm2 img
+    {
+      transition: transform .2s;
+    }
+
+    .clm2 img:hover 
+    {
+      transform: scale(1.2); 
+    }
+
+    /* Clear floats after the columns */
+    .rw:after 
+    {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .inf1
+    {
+      width: 100%;
+      height: 140px;
+      box-sizing: border-box;
+      background-color: Crimson;
+      padding-top: 12px;
+      text-align: center;
+      color: white;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .c1
+    {
+      float: left;
+      width: 30%;
+      text-align: justify;
+    }
+
+    .c1 h2
+    {
+      font-family: Raleway,'Trebuchet MS', Helvetica, sans-serif;
+      background: linear-gradient(to right, Crimson 0%, transparent 100%);
+      padding-left: 10px;
+      text-shadow: 2px 2px 4px black;
+      color: white;
+    }
+
+    .c2
+    {
+      float: left;
+      width: 70%;
+      padding-left: 30px;
+      text-align: justify;
+    }
+
+    .c2 h2
+    {
+      font-family: Raleway,'Trebuchet MS', Helvetica, sans-serif;
+      background: linear-gradient(to right, Crimson 0%, transparent 100%);
+      padding-left: 10px;
+      text-shadow: 2px 2px 4px black;
+      color: white;
+    }
+
+    .c2 p
+    {
+      font-size: 18px;
+      border-style: solid;
+      border-radius: 10px;
+      border-color: #3C346E;
+      padding: 00px 8px;
+    }
+
+    .c2 p:hover
+    {
+      background-color: #3C346E;
+      color: white;
+    }
+
+    .r1:after 
+    {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  
+    .topnav
+    {
+      padding: 00px 100px;
+      overflow: hidden;
+      display: block;
+      background-color: Crimson;
+      text-align: center;
+    }
+
+    .topnav p
+    {
+      float: left;
+      color: white;
+    }
+
+    .topnav .lst1
+    {
+      float: right;
+      padding: 15px 10px;
+      color: white;
+    }
+
+    .topnav .lst1 i
+    {
+      padding: 00px 4px;
+      border-right-style: solid;
+      border-right-width: 1px;
+    }
+
+    .topnav i:hover 
+    {
+      color: black;
+    }
+
+    .header
+    {
+      padding: 10px 100px;
+      overflow: hidden;
+    }
+
+    .header .lg1 a 
+    {
+      float: right;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 30px 30px;
+      text-decoration: none;
+    }
+
+    .header img
+    {
+      float: left;
+    }
+
+    .header .lg1 a:hover 
+    {
+      padding-bottom: 8px;
+      border-bottom: solid;
+      border-bottom-width: 5px;
+      border-bottom-color: #3C346E;
+    }
+
+    .cont
+    {
+      position: relative;
+      margin: 0 auto;
+    }
+
+    .cont .path
+    {
+      position: absolute;
+      bottom: 0;
+      background: rgb(0, 0, 0); /* Fallback color */
+      background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+      color: #f1f1f1;
+      width: 100%;
+      height: 100%;
+      margin-bottom: 5px;
+    }
+
+    .path
+    {
+      text-align: center;
+      font-family: Raleway,'Trebuchet MS', Helvetica, sans-serif;
+      padding-top: 50px;
+    }
+
+    .path h1
+    {
+      padding-top: 10px;
+      color: white;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .path p
+    {
+      text-decoration: none;
+      text-align: center;
+      color: white;
+      text-shadow: 2px 2px 4px black;
+      font-size: 20px;
+    }
+
+    .content
+    {
+      padding: 00px 100px;
+    }
+
+    .btmnav
+    {
+      padding: 00px 100px;
+      overflow: hidden;
+      display: block;
+      background-color: #3C346E;
+    }
+
+    .column1 
+    {
+      float: left;
+      width: 33.33%;
+      padding: 20px 50px;
+      color: white;
+    }
+
+    .submit
+    {
+      border-radius: 4px;
+      background-color: Crimson;
+      border-color: Crimson;
+      color: white;
+      width: 110px;
+      height: 50px;
+    }
+
+    .submit:hover 
+    {
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+    .column2
+    {
+      float: left;
+      color: white;
+      width: 33.33%;
+      padding: 25px 50px;
+    }
+
+    .column2 a
+    {
+      text-decoration: none;
+      color: white;
+    }
+
+    .column2 a:hover
+    {
+      color: Crimson;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .column3
+    {
+      float: left;
+      color: white;
+      width: 33.33%;
+      padding: 20px 50px;
+    }
+
+    .column3 i
+    {
+      padding: 8px 00px;
+    }
+
+    .column3 i:hover
+    {
+      color: Crimson;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .column2 .head
+    {
+      font-size: 30px;
+      font-family: Raleway,'Trebuchet MS', Helvetica, sans-serif;
+      padding-bottom: 00px;
+      padding-left: 22px;
+      background: linear-gradient(to right, Crimson 0%, transparent 100%);
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .column3 .head
+    {
+      padding: 00px 00px 00px 25px;
+      font-size: 30px;
+      font-family: Raleway,'Trebuchet MS', Helvetica, sans-serif;
+      padding-bottom: 00px;
+      background: linear-gradient(to right, Crimson 0%, transparent 100%);
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .row:after 
+    {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    .footer 
+    {
+      padding: 00px 100px;
+      overflow: hidden;
+      display: block;
+      background-color: #161748;
+      text-align: center;
+      color: white;
+    }
+
+    .footer p
+    {
+      float: left;
+    }
+
+    .footer .lst2 i
+    {
+      float: right;
+      padding: 14px 6px;
+      color: white;
+      font-size: 20px;
+    }
+
+    .footer i:hover 
+    {
+      color: black;
+    }
+
+  </style>
+</head>
+  <body>
+
+    <div class="topnav">
+      <p>Welcome to the Lifecare Hospital</p>
+      <div class="lst1">
+        <i class="fas fa-phone-alt"> 514 934-1934</i>
+        <i class="far fa-envelope"> info@lifecarehospital.com</i>
+        <i class="fas fa-map-marker-alt"> Montreal</i>
+      </div>
+    </div>
+
+    <div class="header">
+      <a href="Project1.html"><img src="Images/logo2.png" alt="" height="80" width="170"></a>
+      <div class="lg1">
+        <a href="login.html">Log In</a>
+        <a href="Contact_us.html">Contact us</a>
+        <a href="About_us.html">About us</a>
+        <a href="Staff_Page.html">Staff</a>
+        <a href="Appointment_Page.html">Book An Appointment</a>  
+      </div>  
+    </div>
+
+    <div class="cont">
+      <img src="Images/hms1.jpg" alt="" style="width: 100%">
+      <div class="path">
+        <h1>About Us</h1>
+        <p><a href="Project1.html" style="color: white;">Home</a> <i class="fas fa-angle-double-right" style="color: Crimson"></i> About Us</p>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="rw">
+        <div class="clm1">
+          <h1>WHO WE ARE</h1>
+          <ul>
+          <li>ISI Hospital is a venture of Tulips Healthcare Pvt Ltd. This is a Private Limited Company established in 2014, with the goal of starting a multi speciality hospital in Montreal City.</li>
+
+          <li>It’s also a joint venture of eight surgeons from varied surgical specialities like General & Laparoscopic surgery, Orthopaedics & Joint replacement surgery, Spine surgery, Head & neck surgery and Maxillofacial surgery. Though all the surgeons are from different surgical specialities, but there is one common vision amongst all 8 surgeons, the vision of providing state of the art healthcare facilities in imparting solace to the sufferings of all the strata of the society at affordable cost. The team is a perfect blend of experience and expertise of senior surgeons with the enthusiasm and dynamism of slightly younger surgeons.</li>
+
+          <li>The ISI hospital is a 100 bedded hospital located in Montreal City. It is away from the stuffy and noisy environment of the city. The Hospital is spread around a 3000 square meters land, amidst peaceful and natural surroundings, to provide a conducive atmosphere perfect to promote healing and instigate a sense of well-being amongst all patients coming to the hospital. The hospital is equipped with 6 state of the art operation theatres with all the latest and modern surgical gadgets, a 8 bedded state of the art Intensive care unit to manage all kinds of critically ill patients, a 6 bedded Trauma & Emergency unit to cater all kinds of surgical and non-surgical emergencies and a fully equipped laboratory and radiological services. There are separate general wards for male and female patients, special rooms and suite rooms to cater the needs of all strata of the society.  In a nut shell it’s a multispecialty hospital that provides comprehensive healthcare under one roof.</li>
+          </ul>
+        </div>
+  
+        <div class="clm2">
+          <img src="Images/about.jpg" alt="" height="375" width="425">
+        </div>
+      </div>
+    </div>
+
+    <div class="inf1">
+      <h1>Your Health Is Our Responsibility.</h1>
+      <h3>24×7 Services</h3>
+    </div>
+
+    <div style="padding: 35px 100px;">
+      <div class="r1">
+        <div class="c1">
+          <h2>WHY LIFECARE HOSPITAL?</h2> 
+          <p style="font-size: 18px;">Lifecare Hospital boasts itself as a comprehensive healthcare hub, rather than just a super speciality hospital. It caters all patients suffering from vivid variety of medical ailments, and has a state of the art healthcare delivery systems of all the multispecialty and super specialities under one common roof.</p>
+          <p style="font-size: 18px;">Lifecare Hospital has a special focus to cater the needs of international patients. To meet the expectations, deliver quality healthcare and maintaining safety and comfort of international patients, Lifecare hospital has appointed a dedicated team of coordinators who have left no stone unturned. This team looking after the international patients really makes them feel at home in true sense.</p>
+        </div> 
+
+        <div class="c2">
+          <h2>GLIMPSES OF LIFECARE HOSPITAL</h2> 
+          <p>100 bedded Multi-Specialty Hospital providing complete healthcare solution at a reasonably low cost as compared to other corporate hospitals in nearby cities and across India.</p>
+          <p>Protocol based medical expertise matching international standards.</p>
+          <p>Its location away from the stuffy and noisy environment of the city, amidst peaceful and natural surroundings, to provide a conducive atmosphere perfect to promote healing and instigate a sense of well-being amongst all patients coming to the hospital.</p>
+          <p>6 state of the art operation theatres with all the latest and modern surgical gadgets, a 8 bedded state of the art Intensive care unit to manage all kinds of critically ill patients, a 6 bedded Trauma & Emergency unit to cater all kinds of surgical and non-surgical emergencies and a fully equipped in house laboratory and radiological services running 24*7.</p>
+          <p>Compassionate and caring nursing and para medical staff.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="btmnav">
+      <div class="row">
+
+        <div class="column1">
+          <div class="lg2">
+            <a href="Project1.html"><img src="Images/logo1.png" alt="" height="80" width="80"></a>
+          </div>
+          <p>It’s also a joint venture of eight surgeons from varied surgical specialities like General & Laparoscopic surgery, Orthopaedics & Joint replacement surgery, Spine surgery, Head & neck surgery and Maxillofacial surgery.</p>
+          <button class="submit" onclick="document.location='About_us.html'">About Us</button>   
+        </div>
+
+        <div class="column2">
+          <div class="head">Useful Links</div>
+            <p><a href="Appointment_Page.html" style="margin-bottom: 10px;">Book An Appointment</a></p>
+            <p><a href="Staff_Page.html">Staff</a></p>
+            <p><a href="About_us.html">About Us</a></p>
+            <p><a href="Contact_us.html">Contact Us</a></p>
+        </div>
+
+        <div class="column3">
+          <div class="head">Get In Touch</div>
+          <a href="" style="color: white"><i class="fas fa-phone-alt"> 514 934-1934</i></a><br>
+          <a href="https://www.gmail.com" style="color: white"><i class="far fa-envelope"> info@lifecarehospital.com</i></a><br>
+          <a href="https://www.google.com/maps" style="color: white"><i class="fas fa-map-marker-alt"> Montreal</i></a><br>
+          <a href="project1.html" style="color: white"><i class="fas fa-globe-americas"> https://www.lifecarehospital.com</i></a><br>
+          <a href="" style="color: white"><i class="far fa-clock"> Monday - Saturday 9 AM to 7 PM<br>
+                                    Sunday - Emergency 24x7x365<br>
+                                    (on holidays also)
+          </i></a><br>
+        </div>
+
+      </div>  
+    </div>
+
+    <div class="footer">
+      <p>2020 © All Rights Reserved | Designed and Developed by Yagnesh Patel</p>
+
+      <div class="lst2">
+        <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+
+  </body>
+</html>

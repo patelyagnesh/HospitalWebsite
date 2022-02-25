@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login Page</title>
+  <script src="https://kit.fontawesome.com/7ee2a4395b.js" crossorigin="anonymous"></script>
+  <script>
+    function f1(form)
+    {
+      if(form.uname.value == "doctor" && form.psw.value == "doctor")
+      {
+        window.open('Project1.html')
+      }
+      else
+      {
+        alert("Username or Password is incorrect...")
+      }
+      if(form.uname.value == "patient" && form.psw.value == "patient")
+      {
+        window.open('Project1.html')
+      }
+      else
+      {
+        alert("Username or Password is incorrect...")
+      }
+    }
+
+    function f2(form)
+    {
+      if (form.choice.value == "" || form.choice.value == null) 
+      {
+        alert("Choice must be filled out");
+        return false;
+      }
+      if (form.fname.value == "" || form.fname.value == null) 
+      {
+        alert("First Name must be filled out");
+        return false;
+      }
+      if (form.lname.value == "" || form.lname.value == null) 
+      {
+        alert("Last Name must be filled out");
+        return false;
+      }
+      if (form.email.value == "" || form.email.value == null) 
+      {
+        alert("Email must be filled out");
+        return false;
+      }
+      if (form.psw.value == "" || form.psw.value == null) 
+      {
+        alert("Password must be filled out");
+        return false;
+      }
+      if (form.conpsw.value == "" || form.conpsw.value == null) 
+      {
+        alert("Confirm Password must be filled out");
+        return false;
+      }
+      if (form.psw.value != form.conpsw.value)
+      {
+        alert("Password and Confirm Password must be same");
+        return false;
+      }
+      else
+      {
+        alert("User Added Successfully...")
+        modal.style.display = "none";
+      }
+    }
+  </script>
+  <style>
+    body 
+    {
+      margin: 0;
+    }
+
+    * 
+    {
+      box-sizing: border-box;
+    }
+
+    input[type=text], [type=password], [type=email]
+    {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+
+    .container 
+    {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 00px 100px;
+    }
+
+    .container h1
+    {
+      font-family: Raleway,'Trebuchet MS', Helvetica, sans-serif;
+      background: linear-gradient(to right, Crimson 0%, transparent 100%);
+      padding-left: 10px;
+      text-shadow: 2px 2px 4px black;
+      color: white;
+    }
+
+    form
+    {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .btn1
+    {
+      border-radius: 4px;
+      background-color: Crimson;
+      border-color: Crimson;
+      color: white;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .btn1:hover 
+    {
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+    .clm1 .btn2
+    {
+      border-radius: 4px;
+      background-color: transparent;
+      border-color: Crimson;
+      color: black;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .clm1 .btn2:hover 
+    {
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+    .btn3
+    {
+      border-radius: 4px;
+      background-color: Crimson;
+      border-color: Crimson;
+      color: white;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .btn3:hover 
+    {
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+
+    .topnav
+    {
+      padding: 00px 100px;
+      overflow: hidden;
+      display: block;
+      background-color: Crimson;
+      text-align: center;
+    }
+
+    .topnav p
+    {
+      float: left;
+      color: white;
+    }
+
+    .topnav .lst1
+    {
+      float: right;
+      padding: 15px 10px;
+      color: white;
+    }
+
+    .topnav .lst1 i
+    {
+      padding: 00px 4px;
+      border-right-style: solid;
+      border-right-width: 1px;
+    }
+
+    .topnav i:hover 
+    {
+      color: black;
+    }
+
+    .header
+    {
+      padding: 10px 100px;
+      overflow: hidden;
+    }
+
+    .header .lg1 a 
+    {
+      float: right;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 30px 30px;
+      text-decoration: none;
+    }
+
+    .header img
+    {
+      float: left;
+    }
+
+    .header .lg1 a:hover 
+    {
+      padding-bottom: 8px;
+      border-bottom: solid;
+      border-bottom-width: 5px;
+      border-bottom-color: #3C346E;
+    }
+
+    .cont
+    {
+      position: relative;
+      margin: 0 auto;
+    }
+
+    .cont .path
+    {
+      position: absolute;
+      bottom: 0;
+      background: rgb(0, 0, 0); /* Fallback color */
+      background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+      color: #f1f1f1;
+      width: 100%;
+      height: 100%;
+      margin-bottom: 5px;
+    }
+
+    .path
+    {
+      text-align: center;
+      font-family: Raleway,'Trebuchet MS', Helvetica, sans-serif;
+      padding-top: 50px;
+    }
+
+    .path h1
+    {
+      padding-top: 10px;
+      color: white;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .path p
+    {
+      text-decoration: none;
+      text-align: center;
+      color: white;
+      text-shadow: 2px 2px 4px black;
+      font-size: 20px;
+    }
+
+    .clm1
+    {
+      float: left;
+      width: 70%;
+    }
+
+    .modal 
+    {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content 
+    {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 50%;
+    }
+
+    /* The Close Button */
+    .close 
+    {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus 
+    {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .clm2
+    {
+      float: left;
+      width: 30%;
+      padding-left: 50px;
+    }
+
+    .clm2 i
+    {
+      color: #3C346E;
+      padding: 10px 00px;
+    }
+
+    .clm2 i:hover
+    {
+      text-shadow: 2px 2px 4px #3C346E;
+    }
+
+    .rw:after 
+    {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .btmnav
+    {
+      padding: 00px 100px;
+      overflow: hidden;
+      display: block;
+      background-color: #3C346E;
+    }
+
+    .column1 
+    {
+      float: left;
+      width: 33.33%;
+      padding: 20px 50px;
+      color: white;
+    }
+
+    .btn2
+    {
+      border-radius: 4px;
+      background-color: Crimson;
+      border-color: Crimson;
+      color: white;
+      width: 110px;
+      height: 50px;
+    }
+
+    .btn2:hover 
+    {
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+    .column2
+    {
+      float: left;
+      color: white;
+      width: 33.33%;
+      padding: 25px 50px;
+    }
+
+    .column2 a
+    {
+      text-decoration: none;
+      color: white;
+    }
+
+    .column2 a:hover
+    {
+      color: Crimson;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .column3
+    {
+      float: left;
+      color: white;
+      width: 33.33%;
+      padding: 20px 50px;
+    }
+
+    .column3 i
+    {
+      padding: 6px 00px;
+    }
+
+    .column3 i:hover
+    {
+      color: Crimson;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .column2 .head
+    {
+      font-size: 30px;
+      font-family: Raleway,'Trebuchet MS', Helvetica, sans-serif;
+      padding-bottom: 00px;
+      padding-left: 22px;
+      background: linear-gradient(to right, Crimson 0%, transparent 100%);
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .column3 .head
+    {
+      padding: 00px 00px 00px 25px;
+      font-size: 30px;
+      font-family: Raleway,'Trebuchet MS', Helvetica, sans-serif;
+      padding-bottom: 00px;
+      background: linear-gradient(to right, Crimson 0%, transparent 100%);
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .row:after 
+    {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    .footer 
+    {
+      padding: 00px 100px;
+      overflow: hidden;
+      display: block;
+      background-color: #161748;
+      text-align: center;
+      color: white;
+    }
+
+    .footer p
+    {
+      float: left;
+    }
+
+    .footer .lst2 i
+    {
+      float: right;
+      padding: 14px 6px;
+      color: white;
+      font-size: 20px;
+    }
+
+    .footer i:hover 
+    {
+      color: black;
+    }
+
+  </style>
+</head>
+  <body>
+
+    <div class="topnav">
+      <p>Welcome to the Lifecare Hospital</p>
+      <div class="lst1">
+        <i class="fas fa-phone-alt"> 514 934-1934</i>
+        <i class="far fa-envelope"> info@lifecarehospital.com</i>
+        <i class="fas fa-map-marker-alt"> Montreal</i>
+      </div>
+    </div>
+
+    <div class="header">
+      <a href="Project1.html"><img src="Images/logo2.png" alt="" height="80" width="170"></a>
+      <div class="lg1">
+        <a href="login.html">Log In</a>
+        <a href="Contact_us.html">Contact us</a>
+        <a href="About_us.html">About us</a>
+        <a href="Staff_Page.html">Staff</a>
+        <a href="Appointment_Page.html">Book An Appointment</a>  
+      </div>  
+    </div>
+
+    <div class="cont">
+      <img src="Images/hms1.jpg" alt="" style="width: 100%">
+      <div class="path">
+        <h1>Login</h1>
+        <p><a href="Project1.html" style="color: white;">Home</a> <i class="fas fa-angle-double-right" style="color: Crimson"></i> Login</p>
+      </div>
+    </div>
+
+    <div class="container" style="padding: 35px 100px;">
+      <div class="rw">
+        <div class="clm1">
+          <h1>USER LOGIN</h1>
+          <form name="login">
+            <label>Username</label>
+            <input type="text" name="uname" placeholder="Enter Username">
+
+            <label>Password</label>
+            <input type="password" name="psw" placeholder="Enter Password">
+        
+            <button class="btn1" onclick="f1(this.form)">Login</button>
+          </form>
+
+            <button class="btn2" id="btn2">New User</button>
+
+              <div id="myModal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <h1>Registration Form</h1>
+                  
+                  <form id="regform" name="regform">
+                    <div class="rd" style="padding: 00px 30% 10px 30%;">
+                      <input type="radio" name="choice" id="choice" required>
+                      <label style="margin-right: 25%;">Doctor</label>
+                      <input type="radio" name="choice" id="choices" required>
+                      <label>Patient</label><br>
+                    </div>
+                    <input type="text" placeholder="First Name" name="fname" id="fname" required>
+                    <input type="text" placeholder="Last Name" name="lname" id="lname" required>
+                    <input type="email" placeholder="Email Address" name="email" id="email" required>
+                    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+                    <input type="password" placeholder="Confirm Password" name="conpsw" id="conpsw" required>
+        
+                    <button class="btn3" id="btn3" onclick="f2(this.form)">Register Now</button>
+                  </form>
+                </div>  
+              </div>
+
+              <script>
+                // Get the modal
+                var modal = document.getElementById("myModal");
+
+                // Get the button that opens the modal
+                var btn2 = document.getElementById("btn2");
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks the button, open the modal 
+                btn2.onclick = function() 
+                {
+                  modal.style.display = "block";
+                }
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() 
+                {
+                  modal.style.display = "none";
+                }
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) 
+                {
+                  if (event.target == modal) 
+                  {
+                    modal.style.display = "none";
+                  }
+                }
+
+                
+              </script>
+          
+        </div>
+
+        <div class="clm2">
+          <h1>GET IN TOUCH</h1>
+          
+          <a href=""><i class="fas fa-phone-alt"> 514 934-1934</i></a><br>
+          <a href="https://www.gmail.com"><i class="far fa-envelope"> info@lifecarehospital.com</i></a><br>
+          <a href="https://www.google.com/maps"><i class="fas fa-map-marker-alt"> Montreal</i></a><br>
+          <a href="project1.html"><i class="fas fa-globe-americas"> https://www.lifecarehospital.com</i></a><br>
+          <a href=""><i class="far fa-clock"> Monday - Saturday 9 AM to 7 PM<br>
+                                    Sunday - Emergency 24 x 7 x 365<br>
+                                    (on holidays also)
+          </i></a><br>
+        </div>
+      </div>
+    </div>
+
+    <div class="btmnav">
+      <div class="row">
+
+        <div class="column1">
+          <div class="lg2">
+            <a href="Project1.html"><img src="Images/logo1.png" alt="" height="80" width="80"></a>
+          </div>
+          <p>It’s also a joint venture of eight surgeons from varied surgical specialities like General & Laparoscopic surgery, Orthopaedics & Joint replacement surgery, Spine surgery, Head & neck surgery and Maxillofacial surgery.</p>
+          <button class="btn2" onclick="document.location='About_us.html'">About Us</button>    
+        </div>
+
+        <div class="column2">
+          <div class="head">Useful Links</div>
+            <p><a href="Appointment_Page.html" style="margin-bottom: 10px;">Book An Appointment</a></p>
+            <p><a href="Staff_Page.html">Staff</a></p>
+            <p><a href="About_us.html">About Us</a></p>
+            <p><a href="Contact_us.html">Contact Us</a></p>
+        </div>
+
+        <div class="column3">
+          <div class="head">Get In Touch</div>
+          <a href="" style="color: white"><i class="fas fa-phone-alt"> 514 934-1934</i></a><br>
+          <a href="https://www.gmail.com" style="color: white"><i class="far fa-envelope"> info@lifecarehospital.com</i></a><br>
+          <a href="https://www.google.com/maps" style="color: white"><i class="fas fa-map-marker-alt"> Montreal</i></a><br>
+          <a href="project1.html" style="color: white"><i class="fas fa-globe-americas"> https://www.lifecarehospital.com</i></a><br>
+          <a href="" style="color: white"><i class="far fa-clock"> Monday - Saturday 9 AM to 7 PM<br>
+                                    Sunday - Emergency 24x7x365<br>
+                                    (on holidays also)
+          </i></a><br>
+          <a href="" style="color: white"><i class="fas fa-ambulance"> 514 417-2509</i></a><br>
+        </div>
+
+      </div>  
+    </div>
+
+    <div class="footer">
+      <p>2020 © All Rights Reserved | Designed and Developed by Yagnesh Patel</p>
+
+      <div class="lst2">
+        <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+  </body>
+</html>

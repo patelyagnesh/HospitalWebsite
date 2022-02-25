@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Staff Page</title>
+  <script src="https://kit.fontawesome.com/7ee2a4395b.js" crossorigin="anonymous"></script>
+  <style>
+    * 
+    {
+      box-sizing: border-box;
+    }
+
+    body 
+    {
+      margin: 0;
+    }
+
+    .topnav
+    {
+      padding: 00px 100px;
+      overflow: hidden;
+      display: block;
+      background-color: Crimson;
+      text-align: center;
+    }
+
+    .topnav p
+    {
+      float: left;
+      color: white;
+    }
+
+    .topnav .lst1
+    {
+      float: right;
+      padding: 15px 10px;
+      color: white;
+    }
+
+    .topnav .lst1 i
+    {
+      padding: 00px 4px;
+      border-right-style: solid;
+      border-right-width: 1px;
+    }
+
+    .topnav i:hover 
+    {
+      color: black;
+    }
+
+    .header
+    {
+      padding: 10px 100px;
+      overflow: hidden;
+    }
+
+    .header .lg1 a 
+    {
+      float: right;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 30px 30px;
+      text-decoration: none;
+    }
+
+    .header img
+    {
+      float: left;
+    }
+
+    .header .lg1 a:hover 
+    {
+      padding-bottom: 8px;
+      border-bottom: solid;
+      border-bottom-width: 5px;
+      border-bottom-color: #3C346E;
+    }
+
+    .cont
+    {
+      position: relative;
+      margin: 0 auto;
+    }
+
+    .cont .path
+    {
+      position: absolute;
+      bottom: 0;
+      background: rgb(0, 0, 0); /* Fallback color */
+      background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+      color: #f1f1f1;
+      width: 100%;
+      height: 100%;
+      margin-bottom: 5px;
+    }
+
+    .path
+    {
+      text-align: center;
+      font-family: Raleway,'Trebuchet MS', Helvetica, sans-serif;
+      padding-top: 50px;
+    }
+
+    .path h1
+    {
+      padding-top: 10px;
+      color: white;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .path p
+    {
+      text-decoration: none;
+      text-align: center;
+      color: white;
+      text-shadow: 2px 2px 4px black;
+      font-size: 20px;
+    }
+
+    .container 
+    {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 00px 100px;
+    }
+
+    .container h1
+    {
+      font-family: Raleway,'Trebuchet MS', Helvetica, sans-serif;
+      background: linear-gradient(to right, Crimson 0%, transparent 100%);
+      padding-left: 10px;
+      text-shadow: 2px 2px 4px black;
+      color: white;
+    }
+
+    .clm1
+    {
+      float: left;
+      width: 70%;
+    }
+
+    .clm2
+    {
+      float: left;
+      width: 30%;
+      padding-left: 50px;
+    }
+
+    .clm2 i
+    {
+      color: #3C346E;
+      padding: 10px 00px;
+    }
+
+    .clm2 i:hover
+    {
+      text-shadow: 2px 2px 4px #3C346E;
+    }
+
+    .rw:after 
+    {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .btmnav
+    {
+      padding: 00px 100px;
+      overflow: hidden;
+      display: block;
+      background-color: #3C346E;
+    }
+
+    .column1 
+    {
+      float: left;
+      width: 33.33%;
+      padding: 20px 50px;
+      color: white;
+    }
+
+    .submit
+    {
+      border-radius: 4px;
+      background-color: Crimson;
+      border-color: Crimson;
+      color: white;
+      width: 110px;
+      height: 50px;
+    }
+
+    .submit:hover 
+    {
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+    .column2
+    {
+      float: left;
+      color: white;
+      width: 33.33%;
+      padding: 25px 50px;
+    }
+
+    .column2 a
+    {
+      text-decoration: none;
+      color: white;
+    }
+
+    .column2 a:hover
+    {
+      color: Crimson;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .column3
+    {
+      float: left;
+      color: white;
+      width: 33.33%;
+      padding: 20px 50px;
+    }
+
+    .column3 i
+    {
+      padding: 6px 00px;
+    }
+
+    .column3 i:hover
+    {
+      color: Crimson;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .column2 .head
+    {
+      font-size: 30px;
+      font-family: Raleway,'Trebuchet MS', Helvetica, sans-serif;
+      padding-bottom: 00px;
+      padding-left: 22px;
+      background: linear-gradient(to right, Crimson 0%, transparent 100%);
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .column3 .head
+    {
+      padding: 00px 00px 00px 25px;
+      font-size: 30px;
+      font-family: Raleway,'Trebuchet MS', Helvetica, sans-serif;
+      padding-bottom: 00px;
+      background: linear-gradient(to right, Crimson 0%, transparent 100%);
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .row:after 
+    {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    .footer 
+    {
+      padding: 00px 100px;
+      overflow: hidden;
+      display: block;
+      background-color: #161748;
+      text-align: center;
+      color: white;
+    }
+
+    .footer p
+    {
+      float: left;
+    }
+
+    .footer .lst2 i
+    {
+      float: right;
+      padding: 14px 6px;
+      color: white;
+      font-size: 20px;
+    }
+
+    .footer i:hover 
+    {
+      color: black;
+    }
+
+    /*Flip Card*/
+    .col1
+    {
+      float: left;
+      width: 33.3%;
+      margin-bottom: 16px;
+      padding: 0 8px;
+    }
+
+    .row1:after 
+    {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .title 
+    {
+      color: grey;
+    }
+
+    .title1
+    {
+      color: grey;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .flip-card 
+    {
+      background-color: transparent;
+      width: 300px;
+      height: 400px;
+      perspective: 1000px;
+    }
+
+    .flip-card-inner 
+    {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+
+    .flip-card:hover .flip-card-inner 
+    {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back 
+    {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      padding: 20px;
+    }
+
+    .flip-card-front 
+    {
+      color: black;
+    }
+
+    .flip-card-back 
+    {
+      background-color: #3C346E;
+      color: white;
+      transform: rotateY(180deg);
+    }
+
+  </style>
+</head>
+  <body>
+
+    <div class="topnav">
+      <p>Welcome to the Lifecare Hospital</p>
+      <div class="lst1">
+        <i class="fas fa-phone-alt"> 514 934-1934</i>
+        <i class="far fa-envelope"> info@lifecarehospital.com</i>
+        <i class="fas fa-map-marker-alt"> Montreal</i>
+      </div>
+    </div>
+
+    <div class="header">
+      <a href="Project1.html"><img src="Images/logo2.png" alt="" height="80" width="170"></a>
+      <div class="lg1">
+        <a href="login.html">Log In</a>
+        <a href="Contact_us.html">Contact us</a>
+        <a href="About_us.html">About us</a>
+        <a href="Staff_Page.html">Staff</a>
+        <a href="Appointment_Page.html">Book An Appointment</a>  
+      </div>  
+    </div>
+
+    <div class="cont">
+      <img src="Images/hms1.jpg" alt="" style="width: 100%">
+      <div class="path">
+        <h1>Staff</h1>
+        <p><a href="Project1.html" style="color: white;">Home</a> <i class="fas fa-angle-double-right" style="color: Crimson"></i> Staff</p>
+      </div>
+    </div>
+
+    <div class="container" style="padding: 35px 100px;">
+      <div class="rw">
+        <div class="clm1">
+          <div class="row1">
+            <div class="col1">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="Images/doc1.jpg" alt="Avatar" style="width:200px; height:200px;">
+                    <h2>Dr. Jane Doe</h2>
+                    <p class="title">Cardiologist</p> 
+                    <i class="far fa-envelope" style="text-align: center;"> drjane@lifecarehospital.com</i>
+                  </div>
+                  <div class="flip-card-back">
+                    <h2>Dr. Jane Doe</h2> 
+                    <p class="title1">Cardiologist</p>
+                    <p style="text-align: justify;">She has a vast experience in diagnosing and treating various types of cardiac arrhythmias. She provides high quality cardiac care with expertise in both device implantation and catheter ablation.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col1">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="Images/doc2.jpg" alt="Avatar" style="width:200px; height:200px;">
+                    <h2>Dr. Michel Pouder</h2>
+                    <p class="title">Laparoscopic Surgeon</p> 
+                    <i class="far fa-envelope" style="text-align: center;"> drmichel@lifecarehospital.com</i>
+                  </div>
+                  <div class="flip-card-back">
+                    <h2>Dr. Michel Pouder</h2> 
+                    <p class="title1">Laparoscopic Surgeon</p>
+                    <p style="text-align: justify;">He is having experience of more than 18 Years to treat all surgical disease (like Stone, Cancer & Obesity) of Liver, Hernia, Gall-bladder, Piles , G I Surgery, Thyroid, Keyhole Surgery & Gastro-intestinal organs by laparoscopic technique and also performing complex surgery by open approach. Hence patient gets uncompromised complete treatment for his disease at same time.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col1">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="Images/doc3.jpg" alt="Avatar" style="width:200px; height:200px;">
+                    <h2>Dr. Nancy Salzman</h2>
+                    <p class="title">Oral & Maxillofacial Surgeon</p> 
+                    <i class="far fa-envelope" style="text-align: center;"> drnancy@lifecarehospital.com</i>
+                  </div>
+                  <div class="flip-card-back">
+                    <h2>Dr. Nancy Salzman</h2> 
+                    <p class="title1">Oral & Maxillofacial Surgeon</p>
+                    <p style="text-align: justify;">She has in hand experience of operating & assisting the patients in the fields of Basic oral Surgeries, Maxillofacial trauma, Maxillofacial Pathology With Reconstruction, Dental Implants, TMJ joint surgeries, Lasers, Cleft lip and palate, Orthognathic surgery, Head and neck cancer surgery etc.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col1">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="Images/doc4.jpg" alt="Avatar" style="width:200px; height:200px;">
+                    <h2>Dr. James Heilman</h2>
+                    <p class="title">Dental</p> 
+                    <i class="far fa-envelope" style="text-align: center;"> drjames@lifecarehospital.com</i>
+                  </div>
+                  <div class="flip-card-back">
+                    <h2>Dr. James Heilman</h2> 
+                    <p class="title1">Dental</p>
+                    <p style="text-align: justify;">He has been certified for Immediate Implant Placement and Tooth Replacement for All on 4 treatment concept. Is also certified for Full Mouth Rehabilitation with All on 4 concept without Sinus Augmentation. He has got certification and formal training for Botox and Dermal Filler treatment which will include forehead line, frown lines, crow feet, under eye wrinkles removal, gummy smile management, face lifting, cheek augmentation, chin augmentation, eyebrow lifts and so on.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col1">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="Images/doc5.jpg" alt="Avatar" style="width:200px; height:200px;">
+                    <h2>Dr. David Naylor</h2>
+                    <p class="title">Orthopedic Surgeon</p> 
+                    <i class="far fa-envelope" style="text-align: center;"> drdavid@lifecarehospital.com</i>
+                  </div>
+                  <div class="flip-card-back">
+                    <h2>Dr. David Naylor</h2> 
+                    <p class="title1">Orthopedic Surgeon</p>
+                    <p style="text-align: justify;">He is devoting his career to his patients by constantly striving to innovate and make procedures less invasive, with smaller incisions, less pain, and shorter downtime. He is committed to advancing his field of specialty.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col1">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="Images/doc6.png" alt="Avatar" style="width:200px; height:200px;">
+                    <h2>Dr. Christine Frayret</h2>
+                    <p class="title">ENT Surgeon</p> 
+                    <i class="far fa-envelope" style="text-align: center;"> drchristine@lifecarehospital.com</i>
+                  </div>
+                  <div class="flip-card-back">
+                    <h2>Dr. Christine Frayret</h2> 
+                    <p class="title1">ENT Surgeon</p>
+                    <p style="text-align: justify;">He is very experienced and skilful surgeon with updated skills. He one of the few Cochlear Implant Surgeons of Montreal.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col1">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="Images/doc7.jpg" alt="Avatar" style="width:200px; height:200px;">
+                    <h2>Dr. Emest McCulloch</h2>
+                    <p class="title">Oral & Maxillofacial Surgeon</p> 
+                    <i class="far fa-envelope" style="text-align: center;"> dremest@lifecarehospital.com</i>
+                  </div>
+                  <div class="flip-card-back">
+                    <h2>Dr. Emest McCulloch</h2> 
+                    <p class="title1">Oral & Maxillofacial Surgeon</p>
+                    <p style="text-align: justify;">He has been practicing exclusive Oral and Maxillofacial Surgery since 2009. He has expertise in all kinds of surgeries, like Dental Implants, Wisdom Tooth removal, Facial cosmetic surgeries, Treatment of facial and jaw fractures, Tumours and Tobacco related oral diseases.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col1">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="Images/doc8.png" alt="Avatar" style="width:200px; height:200px;">
+                    <h2>Dr. James Till</h2>
+                    <p class="title">Psychiatrist</p> 
+                    <i class="far fa-envelope" style="text-align: center;"> drtill@lifecarehospital.com</i>
+                  </div>
+                  <div class="flip-card-back">
+                    <h2>Dr. James Till</h2> 
+                    <p class="title1">Psychiatrist</p>
+                    <p style="text-align: justify;">He has used his knowledge to spread awareness about several psychological conditions like panic attacks, OCD, Drug addiction, etc., which you can read about in several publications. He is also invited to several conferences to share his treatment techniques.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col1">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="Images/doc9.jpg" alt="Avatar" style="width:200px; height:200px;">
+                    <h2>Dr. Heather Ross</h2>
+                    <p class="title">Gynaecologist</p> 
+                    <i class="far fa-envelope" style="text-align: center;"> drheather@lifecarehospital.com</i>
+                  </div>
+                  <div class="flip-card-back">
+                    <h2>Dr. Heather Ross</h2> 
+                    <p class="title1">Gynaecologist</p>
+                    <p style="text-align: justify;">With an experience of around 15 years, Dr Heather Ross holds expertise in LAVH, excision of pelvic endometriosis, ovarian cystectomy, adhesiolysis, salpingectomy, and resection of sub-mucous fibroids.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col1">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="Images/doc10.jpg" alt="Avatar" style="width:200px; height:200px;">
+                    <h2>Dr. Saba Merchant</h2>
+                    <p class="title">Paediatrician</p> 
+                    <i class="far fa-envelope" style="text-align: center;"> drsaba@lifecarehospital.com</i>
+                  </div>
+                  <div class="flip-card-back">
+                    <h2>Dr. Saba Merchant</h2> 
+                    <p class="title1">Paediatrician</p>
+                    <p style="text-align: justify;">Dr. Saba Merchant is a General Pediatrician with an interest and experience in developmental pediatrics. She started working as a pediatrician in 2012 in Alberta. She moved to Toronto in 2019. Her goal as a pediatrician is to help children stay physically and mentally healthy up into their adulthood.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col1">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="Images/doc11.jpg" alt="Avatar" style="width:200px; height:200px;">
+                    <h2>Dr. Allan Slomovic</h2>
+                    <p class="title">Cardiologist</p> 
+                    <i class="far fa-envelope" style="text-align: center;"> drallan@lifecarehospital.com</i>
+                  </div>
+                  <div class="flip-card-back">
+                    <h2>Dr. Allan Slomovic</h2> 
+                    <p class="title1">Cardiologist</p>
+                    <p style="text-align: justify;">Dr. Allan Slomovic specialises in inherited cardiac diseases, and has particular interests in cardiomyopathy, ethnic differences in cardiovascular disease, echocardiography and sudden arrhythmic death syndrome (SADS).</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col1">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="Images/doc12.jfif" alt="Avatar" style="width:200px; height:200px;">
+                    <h2>Dr. Tirone David</h2>
+                    <p class="title">Physician</p> 
+                    <i class="far fa-envelope" style="text-align: center;"> drtirone@lifecarehospital.com</i>
+                  </div>
+                  <div class="flip-card-back">
+                    <h2>Dr. Tirone David</h2> 
+                    <p class="title1">Physician</p>
+                    <p style="text-align: justify;">Dr. Tirone David hopes to offer a full service family practice. He has special interests in prenatal and low risk obstetrical care, and minor surgical procedures. He also has an interest in teaching and will continue to be involved with the education of residents and medical students.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col1">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="Images/doc13.jpg" alt="Avatar" style="width:200px; height:200px;">
+                    <h2>Dr. Sara Gray</h2>
+                    <p class="title">Gynaecologist</p> 
+                    <i class="far fa-envelope" style="text-align: center;"> drsara@lifecarehospital.com</i>
+                  </div>
+                  <div class="flip-card-back">
+                    <h2>Dr. Sara Gray</h2> 
+                    <p class="title1">Gynaecologist</p>
+                    <p style="text-align: justify;">With more than 15 plus years of expertise in Obstetricians and Gynecology, Dr Sara Gray is one of the best ART specialists in Canada. She specializes in performing complicated IVF procedures, laparoscopic hysterectomy, laser fibroid removal surgery and laparoscopic fertility procedures, including cancer surgeries.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col1">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="Images/doc14.jpg" alt="Avatar" style="width:200px; height:200px;">
+                    <h2>Dr. Ian McGilvray</h2>
+                    <p class="title">ENT Surgeon</p> 
+                    <i class="far fa-envelope" style="text-align: center;"> drian@lifecarehospital.com</i>
+                  </div>
+                  <div class="flip-card-back">
+                    <h2>Dr. Ian McGilvray</h2> 
+                    <p class="title1">ENT Surgeon</p>
+                    <p style="text-align: justify;">He is dedicated towards the comprehensive management of ENT diseases with the latest skill and use of technology. He has delivered many lectures on Vertigo Evaluation and management in various conferences and CMEs across the country.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col1">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="Images/doc15.jpg" alt="Avatar" style="width:200px; height:200px;">
+                    <h2>Dr. John Flannery</h2>
+                    <p class="title">General Surgeon</p> 
+                    <i class="far fa-envelope" style="text-align: center;"> drjohn@lifecarehospital.com</i>
+                  </div>
+                  <div class="flip-card-back">
+                    <h2>Dr. John Flannery</h2> 
+                    <p class="title1">General Surgeon</p>
+                    <p style="text-align: justify;">About 14 years of experience in general surgical field. He was exposed to all types of major and minor surgical procedures. He also had a wide exposure in managing all types of cases that come in the emergency department.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+          </div>  
+        </div>
+
+        <div class="clm2">
+          <h1>GET IN TOUCH</h1>
+          
+          <a href=""><i class="fas fa-phone-alt"> 514 934-1934</i></a><br>
+          <a href="https://www.gmail.com"><i class="far fa-envelope"> info@lifecarehospital.com</i></a><br>
+          <a href="https://www.google.com/maps"><i class="fas fa-map-marker-alt"> Montreal</i></a><br>
+          <a href="project1.html"><i class="fas fa-globe-americas"> https://www.lifecarehospital.com</i></a><br>
+          <a href=""><i class="far fa-clock"> Monday - Saturday 9 AM to 7 PM<br>
+                                    Sunday - Emergency 24 x 7 x 365<br>
+                                    (on holidays also)
+          </i></a><br>
+        </div>
+      </div>
+    </div>
+
+    <div class="btmnav">
+      <div class="row">
+
+        <div class="column1">
+          <div class="lg2">
+            <a href="Project1.html"><img src="Images/logo1.png" alt="" height="80" width="80"></a>
+          </div>
+          <p>It’s also a joint venture of eight surgeons from varied surgical specialities like General & Laparoscopic surgery, Orthopaedics & Joint replacement surgery, Spine surgery, Head & neck surgery and Maxillofacial surgery.</p>
+          <button class="submit" onclick="document.location='About_us.html'">About Us</button>   
+        </div>
+
+        <div class="column2">
+          <div class="head">Useful Links</div>
+            <p><a href="Appointment_Page.html" style="margin-bottom: 10px;">Book An Appointment</a></p>
+            <p><a href="Staff_Page.html">Staff</a></p>
+            <p><a href="About_us.html">About Us</a></p>
+            <p><a href="Contact_us.html">Contact Us</a></p>
+        </div>
+
+        <div class="column3">
+          <div class="head">Get In Touch</div>
+          <a href="" style="color: white"><i class="fas fa-phone-alt"> 514 934-1934</i></a><br>
+          <a href="https://www.gmail.com" style="color: white"><i class="far fa-envelope"> info@lifecarehospital.com</i></a><br>
+          <a href="https://www.google.com/maps" style="color: white"><i class="fas fa-map-marker-alt"> Montreal</i></a><br>
+          <a href="project1.html" style="color: white"><i class="fas fa-globe-americas"> https://www.lifecarehospital.com</i></a><br>
+          <a href="" style="color: white"><i class="far fa-clock"> Monday - Saturday 9 AM to 7 PM<br>
+                                    Sunday - Emergency 24x7x365<br>
+                                    (on holidays also)
+          </i></a><br>
+          <a href="" style="color: white"><i class="fas fa-ambulance"> 514 417-2509</i></a><br>
+        </div>
+
+      </div>  
+    </div>
+
+    <div class="footer">
+      <p>2020 © All Rights Reserved | Designed and Developed by Yagnesh Patel</p>
+
+      <div class="lst2">
+        <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+
+  </body>
+</html>

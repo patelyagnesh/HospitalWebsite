@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Index Page</title>
+  <script src="https://kit.fontawesome.com/7ee2a4395b.js" crossorigin="anonymous"></script>
+
+  <script>
+    function openWin() 
+    {
+      window.open("Appointment_Page.html");
+    }
+  </script>
+
+  <style>
+    * 
+    {
+      box-sizing: border-box;
+    }
+
+    body 
+    {
+      margin: 0;
+    }
+
+    .topnav
+    {
+      padding: 00px 100px;
+      overflow: hidden;
+      display: block;
+      background-color: Crimson;
+      text-align: center;
+    }
+
+    .topnav p
+    {
+      float: left;
+      color: white;
+    }
+
+    .topnav .lst1
+    {
+      float: right;
+      padding: 15px 10px;
+      color: white;
+    }
+
+    .topnav .lst1 i
+    {
+      padding: 00px 4px;
+      border-right-style: solid;
+      border-right-width: 1px;
+    }
+
+    .topnav i:hover 
+    {
+      color: black;
+    }
+
+    .header
+    {
+      padding: 10px 100px;
+      overflow: hidden;
+    }
+
+    .header .lg1 a 
+    {
+      float: right;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 30px 30px;
+      text-decoration: none;
+    }
+
+    .header img
+    {
+      float: left;
+    }
+
+    .header .lg1 a:hover 
+    {
+      padding-bottom: 8px;
+      border-bottom: solid;
+      border-bottom-width: 5px;
+      border-bottom-color: #3C346E;
+    }
+
+    .btmnav
+    {
+      padding: 00px 100px;
+      overflow: hidden;
+      display: block;
+      background-color: #3C346E;
+    }
+
+    .column1 
+    {
+      float: left;
+      width: 33.33%;
+      padding: 20px 50px;
+      color: white;
+    }
+
+    .submit
+    {
+      border-radius: 4px;
+      background-color: Crimson;
+      border-color: Crimson;
+      color: white;
+      width: 110px;
+      height: 50px;
+    }
+
+    .submit:hover 
+    {
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+    .column2
+    {
+      float: left;
+      color: white;
+      width: 33.33%;
+      padding: 25px 50px;
+    }
+
+    .column2 a
+    {
+      text-decoration: none;
+      color: white;
+    }
+
+    .column2 a:hover
+    {
+      color: Crimson;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .column3
+    {
+      float: left;
+      color: white;
+      width: 33.33%;
+      padding: 25px 70px;
+    }
+
+    .column3 i
+    {
+      padding: 6px 00px;
+    }
+
+    .column3 i:hover
+    {
+      color: Crimson;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .column2 .head
+    {
+      font-size: 30px;
+      font-family: Raleway,'Trebuchet MS', Helvetica, sans-serif;
+      padding-bottom: 00px;
+      padding-left: 22px;
+      background: linear-gradient(to right, Crimson 0%, transparent 100%);
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .column3 .head
+    {
+      padding: 00px 00px 00px 25px;
+      font-size: 30px;
+      font-family: Raleway,'Trebuchet MS', Helvetica, sans-serif;
+      padding-bottom: 00px;
+      background: linear-gradient(to right, Crimson 0%, transparent 100%);
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .row:after 
+    {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    .footer 
+    {
+      padding: 00px 100px;
+      overflow: hidden;
+      display: block;
+      background-color: #161748;
+      text-align: center;
+      color: white;
+    }
+
+    .footer p
+    {
+      float: left;
+    }
+
+    .footer .lst2 i
+    {
+      float: right;
+      padding: 14px 6px;
+      color: white;
+      font-size: 20px;
+    }
+
+    .footer i:hover 
+    {
+      color: black;
+    }
+
+    /*Slideshow*/
+
+    .mySlides 
+    {
+      display: none; 
+    }
+
+    .mySlides img 
+    {
+      vertical-align: middle;
+    }
+
+    /* Slideshow container */
+    .slideshow-container 
+    {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Caption text */
+    .text 
+    {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext 
+    {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot 
+    {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active 
+    {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade 
+    {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    .info1
+    {
+      width: 100%;
+      height: 140px;
+      box-sizing: border-box;
+      background-color: Crimson;
+      padding: 30px 100px 50px 100px;
+    }
+
+    .info1 h1
+    {
+      float: left;
+      font-family: serif;
+      color: white;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .info1 button 
+    {
+      margin-top: 10px;
+      float: right;
+      text-align: right;
+      background-color: transparent;
+      border: 2px solid white;
+      color: white;
+      padding: 16px 32px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .info1 button:hover
+    {
+      background-color: white;
+      color: Crimson;
+    }
+
+    .info2
+    {
+      padding: 00px 100px;
+    }
+
+    .info2 h2
+    {
+      font-family: Raleway,'Trebuchet MS', Helvetica, sans-serif;
+      background: linear-gradient(to right, #3C346E 0%, transparent 100%);
+      padding-left: 10px;
+      text-shadow: 2px 2px 4px black;
+      color: white;
+    }
+
+    .info2 form
+    {
+      border-style: solid;
+      border-color: grey;
+      border-width: 0.1px;
+      margin-bottom: 20px;
+    }
+
+    .clm1
+    {
+      float: left;
+      width: 30%;
+      padding: 10px;
+    }
+
+    .clm1 img
+    {
+      height: 100%;
+      width: 100%;
+    }
+
+    .clm2
+    {
+      float: left;
+      width: 70%;
+      padding: 10px;
+    }
+
+    .clm2 p
+    {
+      font-size: 20px;
+    }
+
+    .clm2 .b1
+    {
+      font-weight: bold;
+    }
+
+    .rw:after 
+    {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+  </style>
+</head>
+  <body>
+
+    <div class="topnav">
+      <p>Welcome to the Lifecare Hospital</p>
+      <div class="lst1">
+        <i class="fas fa-phone-alt"> 514 934-1934</i>
+        <i class="far fa-envelope"> info@lifecarehospital.com</i>
+        <i class="fas fa-map-marker-alt"> Montreal</i>
+      </div>
+    </div>
+
+    <div class="header">
+      <a href="Project1.html"><img src="Images/logo2.png" alt="" height="80" width="170"></a>
+      <div class="lg1">
+        <a href="login.html">Log In</a>
+        <a href="Contact_us.html">Contact us</a>
+        <a href="About_us.html">About us</a>
+        <a href="Staff_Page.html">Staff</a>
+        <a href="Appointment_Page.html">Book An Appointment</a>  
+      </div>  
+    </div>
+
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="Images/h1.webp" style="width: 100%;" alt="">
+        <div class="text">Building 1</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="Images/h2.jpg" style="width: 100%;" alt="">
+        <div class="text">Building 2</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="Images/h3.jpg" style="width: 100%;" alt="">
+        <div class="text">Building 3</div>
+      </div>
+      <br>
+
+      <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+      </div>
+    </div>
+
+    <script>
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() 
+      {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+
+        for (i = 0; i < slides.length; i++) 
+        {
+          slides[i].style.display = "none";  
+        }
+
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+
+        for (i = 0; i < dots.length; i++) 
+        {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+      }
+    </script>
+
+    <script>
+      var myIndex = 0;
+      carousel();
+
+      function carousel() 
+      {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+
+        for (i = 0; i < x.length; i++) 
+        {
+          x[i].style.display = "none";  
+        }
+
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 3000); // Change image every 3 seconds
+      }
+    </script>
+    
+
+    <div class="info1">
+      <h1>FIND A DOCTOR? MAKE AN APPOINTMENT NOW!</h1>
+      <button class="button" onclick="openWin()">MAKE AN APPOINTMENT</button>
+    </div>
+
+    <div class="info2">
+      <h2>Lifecare Hospital</h2>
+      <form>
+        <div class="rw">
+          <div class="clm1">
+            <img src="Images/mask.jpg" alt="">
+          </div>
+          <div class="clm2"> 
+            <h1>Reminder to all patients and visitors: Wearing a mask is mandatory at the Lifecare Hospital.</h1>
+            <p>Since July 18, 2020, wearing a mask is mandatory in all indoor public spaces across Quebec.</p>
+            <p>Wearing a mask is therefore mandatory on all MUHC sites including hospitals, long-term care facilities and all administrative buildings.</p>
+            <div class="b1">
+              <p>There are certain exceptions notably for:</p>
+              <ul style="font-size: 20px;">
+                <li>health-care employees who are completely behind Plexiglass coverings in certain clinical areas,</li>
+                <li>or while eating and drinking if you can respect the 2 metre distance from others,</li>
+              </ul>
+            </div>
+            <p>Wearing a mask is obligatory throughout the day in all locations, including public spaces, elevators, and hallways. It should cover your nose, mouth and chin at all times and should not have a valve.</p>
+            <p>               Mask wearing, physical distancing, and hand washing remain key in preventing the spread of COVID-19</p>
+            <p>Thank you for your co-operation.</p>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="btmnav">
+      <div class="row">
+
+        <div class="column1">
+          <div class="lg2">
+            <a href="Project1.html"><img src="Images/logo1.png" alt="" height="80" width="80"></a>
+          </div>
+          <p>It’s also a joint venture of eight surgeons from varied surgical specialities like General & Laparoscopic surgery, Orthopaedics & Joint replacement surgery, Spine surgery, Head & neck surgery and Maxillofacial surgery.</p>
+          <button class="submit" onclick="document.location='About_us.html'">About Us</button>  
+        </div>
+
+        <div class="column2">
+          <div class="head">Useful Links</div>
+            <p><a href="Appointment_Page.html" style="margin-bottom: 10px;">Book An Appointment</a></p>
+            <p><a href="Staff_Page.html">Staff</a></p>
+            <p><a href="About_us.html">About Us</a></p>
+            <p><a href="Contact_us.html">Contact Us</a></p>
+        </div>
+
+        <div class="column3">
+          <div class="head">Get In Touch</div>
+          <a href="" style="color: white"><i class="fas fa-phone-alt"> 514 934-1934</i></a><br>
+          <a href="https://www.gmail.com" style="color: white"><i class="far fa-envelope"> info@lifecarehospital.com</i></a><br>
+          <a href="https://www.google.com/maps" style="color: white"><i class="fas fa-map-marker-alt"> Montreal</i></a><br>
+          <a href="project1.html" style="color: white"><i class="fas fa-globe-americas"> https://www.lifecarehospital.com</i></a><br>
+          <a href="" style="color: white"><i class="far fa-clock"> Monday - Saturday 9 AM to 7 PM<br>
+                                    Sunday - Emergency 24 x 7 x 365<br>
+                                    (on holidays also)
+          </i></a><br>
+          <a href="" style="color: white"><i class="fas fa-ambulance"> 514 417-2509</i></a><br>
+        </div>
+
+      </div>  
+    </div>
+
+    <div class="footer">
+      <p>2020 © All Rights Reserved | Designed and Developed by Yagnesh Patel</p>
+
+      <div class="lst2">
+        <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Book An Appointment</title>
+  <script src="https://kit.fontawesome.com/7ee2a4395b.js" crossorigin="anonymous"></script>
+  <script>
+    function f1(form)
+    {
+      if (form.fname.value == "" || form.fname.value == null) 
+      {
+        alert("First Name must be filled out");
+        return false;
+      }
+
+      if (form.lname.value == "" || form.lname.value == null) 
+      {
+        alert("Last Name must be filled out");
+        return false;
+      }
+
+      if (form.phone.value == "" || form.phone.value == null) 
+      {
+        alert("Phone Number must be filled out");
+        return false;
+      }
+
+      if (form.date.value == "" || form.date.value == null) 
+      {
+        alert("Date must be filled out");
+        return false;
+      }
+
+      if (form.email.value == "" || form.email.value == null) 
+      {
+        alert("Email must be filled out");
+        return false;
+      }
+
+      if (form.city.value == "" || form.city.value == null) 
+      {
+        alert("City must be filled out");
+        return false;
+      }
+
+      alert("Your input was received...")
+      window.open('Project1.html')
+    }
+
+  </script>
+  <style>
+    body 
+    {
+      margin: 0;
+    }
+
+    * 
+    {
+      box-sizing: border-box;
+    }
+
+    input[type=text], input[type=date], select, textarea 
+    {
+      padding: 12px;
+      margin: 8px 8px; 
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      resize: vertical;
+    }
+
+    .container 
+    {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 00px 100px;
+    }
+
+    .container h1
+    {
+      font-family: Raleway,'Trebuchet MS', Helvetica, sans-serif;
+      background: linear-gradient(to right, Crimson 0%, transparent 100%);
+      padding-left: 10px;
+      text-shadow: 2px 2px 4px black;
+      color: white;
+    }
+
+    form
+    {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .btn1
+    {
+      border-radius: 4px;
+      background-color: Crimson;
+      border-color: Crimson;
+      color: white;
+      width: 110px;
+      height: 50px;
+    }
+
+    .btn1:hover 
+    {
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+    .topnav
+    {
+      padding: 00px 100px;
+      overflow: hidden;
+      display: block;
+      background-color: Crimson;
+      text-align: center;
+    }
+
+    .topnav p
+    {
+      float: left;
+      color: white;
+    }
+
+    .topnav .lst1
+    {
+      float: right;
+      padding: 15px 10px;
+      color: white;
+    }
+
+    .topnav .lst1 i
+    {
+      padding: 00px 4px;
+      border-right-style: solid;
+      border-right-width: 1px;
+    }
+
+    .topnav i:hover 
+    {
+      color: black;
+    }
+
+    .header
+    {
+      padding: 10px 100px;
+      overflow: hidden;
+    }
+
+    .header .lg1 a 
+    {
+      float: right;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 30px 30px;
+      text-decoration: none;
+    }
+
+    .header img
+    {
+      float: left;
+    }
+
+    .header .lg1 a:hover 
+    {
+      padding-bottom: 8px;
+      border-bottom: solid;
+      border-bottom-width: 5px;
+      border-bottom-color: #3C346E;
+    }
+
+    .cont
+    {
+      position: relative;
+      margin: 0 auto;
+    }
+
+    .cont .path
+    {
+      position: absolute;
+      bottom: 0;
+      background: rgb(0, 0, 0); /* Fallback color */
+      background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+      color: #f1f1f1;
+      width: 100%;
+      height: 100%;
+      margin-bottom: 5px;
+    }
+
+    .path
+    {
+      text-align: center;
+      font-family: Raleway,'Trebuchet MS', Helvetica, sans-serif;
+      padding-top: 50px;
+    }
+
+    .path h1
+    {
+      padding-top: 10px;
+      color: white;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .path p
+    {
+      text-decoration: none;
+      text-align: center;
+      color: white;
+      text-shadow: 2px 2px 4px black;
+      font-size: 20px;
+    }
+
+    .clm1
+    {
+      float: left;
+      width: 70%;
+    }
+
+    .data1 input[type=text], select
+    {
+      width: 200px;
+    }
+
+    .data2 input[type=text], input[type=date], select
+    {
+      width: 200px;
+    }
+
+    .data4 textarea
+    {
+      height:200px;
+      width:860px;
+    }
+
+    .clm2
+    {
+      float: left;
+      width: 30%;
+      padding-left: 50px;
+    }
+
+    .clm2 i
+    {
+      color: #3C346E;
+      padding: 10px 00px;
+    }
+
+    .clm2 i:hover
+    {
+      text-shadow: 2px 2px 4px #3C346E;
+    }
+
+    .rw:after 
+    {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .btmnav
+    {
+      padding: 00px 100px;
+      overflow: hidden;
+      display: block;
+      background-color: #3C346E;
+    }
+
+    .column1 
+    {
+      float: left;
+      width: 33.33%;
+      padding: 20px 50px;
+      color: white;
+    }
+
+    .btn2
+    {
+      border-radius: 4px;
+      background-color: Crimson;
+      border-color: Crimson;
+      color: white;
+      width: 110px;
+      height: 50px;
+    }
+
+    .btn2:hover 
+    {
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+    .column2
+    {
+      float: left;
+      color: white;
+      width: 33.33%;
+      padding: 25px 50px;
+    }
+
+    .column2 a
+    {
+      text-decoration: none;
+      color: white;
+    }
+
+    .column2 a:hover
+    {
+      color: Crimson;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .column3
+    {
+      float: left;
+      color: white;
+      width: 33.33%;
+      padding: 20px 50px;
+    }
+
+    .column3 i
+    {
+      padding: 6px 00px;
+    }
+
+    .column3 i:hover
+    {
+      color: Crimson;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .column2 .head
+    {
+      font-size: 30px;
+      font-family: Raleway,'Trebuchet MS', Helvetica, sans-serif;
+      padding-bottom: 00px;
+      padding-left: 22px;
+      background: linear-gradient(to right, Crimson 0%, transparent 100%);
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .column3 .head
+    {
+      padding: 00px 00px 00px 25px;
+      font-size: 30px;
+      font-family: Raleway,'Trebuchet MS', Helvetica, sans-serif;
+      padding-bottom: 00px;
+      background: linear-gradient(to right, Crimson 0%, transparent 100%);
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .row:after 
+    {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    .footer 
+    {
+      padding: 00px 100px;
+      overflow: hidden;
+      display: block;
+      background-color: #161748;
+      text-align: center;
+      color: white;
+    }
+
+    .footer p
+    {
+      float: left;
+    }
+
+    .footer .lst2 i
+    {
+      float: right;
+      padding: 14px 6px;
+      color: white;
+      font-size: 20px;
+    }
+
+    .footer i:hover 
+    {
+      color: black;
+    }
+
+  </style>
+</head>
+  <body>
+
+    <div class="topnav">
+      <p>Welcome to the Lifecare Hospital</p>
+      <div class="lst1">
+        <i class="fas fa-phone-alt"> 514 934-1934</i>
+        <i class="far fa-envelope"> info@lifecarehospital.com</i>
+        <i class="fas fa-map-marker-alt"> Montreal</i>
+      </div>
+    </div>
+
+    <div class="header">
+      <a href="Project1.html"><img src="Images/logo2.png" alt="" height="80" width="170"></a>
+      <div class="lg1">
+        <a href="login.html">Log In</a>
+        <a href="Contact_us.html">Contact us</a>
+        <a href="About_us.html">About us</a>
+        <a href="Staff_Page.html">Staff</a>
+        <a href="Appointment_Page.html">Book An Appointment</a>  
+      </div>  
+    </div>
+
+    <div class="cont">
+      <img src="Images/hms1.jpg" alt="" style="width: 100%">
+      <div class="path">
+        <h1>Book An Appointment</h1>
+        <p><a href="Project1.html" style="color: white;">Home</a> <i class="fas fa-angle-double-right" style="color: Crimson"></i> Book An Appointment</p>
+      </div>
+    </div>
+
+    <div class="container" style="padding: 35px 100px;">
+      <div class="rw">
+        <div class="clm1">
+          <h1>MAKE AN APPOINTMENT</h1>
+          <form>
+            <div class="data1">
+              <input type="text" id="fname" name="firstname" placeholder="First Name" required>
+              <input type="text" id="lname" name="lastname" placeholder="Last Name" required>
+              <input type="text" id="phone" name="phone" placeholder="Phone Number" required>
+              <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+
+            <div class="data2">
+              <input type="date" id="date" required>
+              <select id="time" name="time">
+                <option value="t1">10:00 AM - 01:00 PM</option>
+                <option value="t2">04:00 PM - 07:00 PM</option>
+              </select>
+              <input type="text" id="email" name="email" placeholder="Email Address" required>
+              <input type="text" id="city" name="city" placeholder="City" required>
+            </div>
+
+            <div class="data3">
+              <select id="appo" name="appo" style="width: 200px;">
+                <option value="v1">Appointment For</option>
+                <option value="v2">Cardiology</option>
+                <option value="v3">ENT - Head & Neck Surgery</option>
+                <option value="v4">Orthopedic Surgery</option>
+                <option value="v5">General & Laparoscopic Surgery</option>
+                <option value="v6">Dental, Oral & Maxillofacial Surgery</option>
+                <option value="v7">Psychiatrist</option>
+                <option value="v8">Gynaecologist</option>
+                <option value="v9">Paediatrician</option>
+                <option value="v10">Health Check-Up</option>
+              </select>
+
+              <select id="doctor" name="doctor" style="width: 640px;">
+                <option value="dc1">Select Doctor</option>
+                <option value="dc2">Dr. Jane Doe (Cardiologist)</option>
+                <option value="dc3">Dr. Michel Pouder (Laparoscopic Surgeon)</option>
+                <option value="dc4">Dr. Nancy Salzman (Oral & Maxillofacial Surgeon)</option>
+                <option value="dc5">Dr. James Heilman (Dental)</option>
+                <option value="dc6">Dr. David Naylor (Orthopedic Surgeon)</option>
+                <option value="dc7">Dr. Christine Frayret (ENT Surgeon)</option>
+                <option value="dc8">Dr. Emest McCulloch (Oral & Maxillofacial Surgeon)</option>
+                <option value="dc9">Dr. James Till (Psychiatrist)</option>
+                <option value="dc10">Dr. Heather Ross (Gynaecologist)</option>
+                <option value="dc11">Dr. Saba Merchant (Paediatrician)</option>
+                <option value="dc12">Dr. Allan Slomovic (Cardiologist)</option>
+                <option value="dc13">Dr. Tirone David (Physician)</option>
+                <option value="dc14">Dr. Sara Gray (Gynaecologist)</option>
+                <option value="dc15">Dr. Ian McGilvray (ENT Surgeon)</option>
+                <option value="dc16">Dr. John Flannery (General Surgeon)</option>
+              </select>
+            </div>
+
+            <div class="data4">
+              <textarea id="msg" name="msg" placeholder="Message"></textarea>
+            </div>
+
+            <button class="btn1" onclick="f1(this.form)" style="margin-left: 7px;"> Submit </button>
+          </form>
+        </div>
+
+        <div class="clm2">
+          <h1>GET IN TOUCH</h1>
+          
+          <a href=""><i class="fas fa-phone-alt"> 514 934-1934</i></a><br>
+          <a href="https://www.gmail.com"><i class="far fa-envelope"> info@lifecarehospital.com</i></a><br>
+          <a href="https://www.google.com/maps"><i class="fas fa-map-marker-alt"> Montreal</i></a><br>
+          <a href="project1.html"><i class="fas fa-globe-americas"> https://www.lifecarehospital.com</i></a><br>
+          <a href=""><i class="far fa-clock"> Monday - Saturday 9 AM to 7 PM<br>
+                                    Sunday - Emergency 24 x 7 x 365<br>
+                                    (on holidays also)
+          </i></a><br>
+        </div>
+      </div>
+    </div>
+
+    <div class="btmnav">
+      <div class="row">
+
+        <div class="column1">
+          <div class="lg2">
+            <a href="Project1.html"><img src="Images/logo1.png" alt="" height="80" width="80"></a>
+          </div>
+          <p>It’s also a joint venture of eight surgeons from varied surgical specialities like General & Laparoscopic surgery, Orthopaedics & Joint replacement surgery, Spine surgery, Head & neck surgery and Maxillofacial surgery.</p>
+          <button class="btn2" onclick="document.location='About_us.html'">About Us</button>    
+        </div>
+
+        <div class="column2">
+          <div class="head">Useful Links</div>
+            <p><a href="Appointment_Page.html" style="margin-bottom: 10px;">Book An Appointment</a></p>
+            <p><a href="Staff_Page.html">Staff</a></p>
+            <p><a href="About_us.html">About Us</a></p>
+            <p><a href="Contact_us.html">Contact Us</a></p>
+        </div>
+
+        <div class="column3">
+          <div class="head">Get In Touch</div>
+          <a href="" style="color: white"><i class="fas fa-phone-alt"> 514 934-1934</i></a><br>
+          <a href="https://www.gmail.com" style="color: white"><i class="far fa-envelope"> info@lifecarehospital.com</i></a><br>
+          <a href="https://www.google.com/maps" style="color: white"><i class="fas fa-map-marker-alt"> Montreal</i></a><br>
+          <a href="project1.html" style="color: white"><i class="fas fa-globe-americas"> https://www.lifecarehospital.com</i></a><br>
+          <a href="" style="color: white"><i class="far fa-clock"> Monday - Saturday 9 AM to 7 PM<br>
+                                    Sunday - Emergency 24x7x365<br>
+                                    (on holidays also)
+          </i></a><br>
+          <a href="" style="color: white"><i class="fas fa-ambulance"> 514 417-2509</i></a><br>
+        </div>
+
+      </div>  
+    </div>
+
+    <div class="footer">
+      <p>2020 © All Rights Reserved | Designed and Developed by Yagnesh Patel</p>
+
+      <div class="lst2">
+        <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+  </body>
+</html>
